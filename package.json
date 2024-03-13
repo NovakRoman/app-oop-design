@@ -1,0 +1,15 @@
+{
+  "name": "app-opp-design",
+  "version": "1.0.0",
+  "description": "App OOP Design",
+  "main": "index.js",
+  "repository": "",
+  "license": "UNLICENSED",
+  "private": false,
+  "scripts": {
+    "start": "parcel index.html",
+  },
+  "devDependencies": {
+    "parcel": "latest",
+  }
+}
