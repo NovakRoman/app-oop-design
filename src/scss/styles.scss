@@ -1,0 +1,408 @@
+@import "maps";
+@import "mixins";
+
+body {
+    margin: 0;
+    font-family: DM Sans;
+}
+
+.pageContainer {
+    padding: 0 250px 0 250px;
+}
+
+
+.header {
+    /*z-index: 10;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px 200px;
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 50px;
+}
+
+.getTicket {
+    padding: 20px;
+    background-color: #2963E1;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.info {
+    font-size: 16px;
+    color: map-get($map: $colors, $key: basic-blue);
+    font-weight: 500;
+}
+
+.welcome {
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* display: flex; */
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.background {
+    display: flex;
+    justify-content: flex-end;
+    z-index: -10;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    /*background-color: linear-gradient(rgba(232, 232, 255, 0.5), rgba(255, 255, 255, 0.5));
+    /*background-repeat: no-repeat;*/
+    transform: scale(-1, 1);
+    background-color: #EEF2FE;
+
+    .backgroundImage {
+        width: 750px;
+    }
+}
+
+.h1 {
+    color: map-get($map: $colors, $key: basic-blue);
+    font-size: 82px;
+    font-weight: 800;
+    margin: 0;
+    padding-top: 80px;
+}
+
+.eventInfoList {
+    margin-top: 50px;
+    padding-left: 0;  
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    column-gap: 100px;
+    align-items: center;
+    /*justify-content: space-between;*/
+    color: map-get($map: $colors, $key: basic-blue);
+}
+
+.eventInfoListData {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1c3f8b;
+}
+
+.exptertTitle {
+    @include font-subTitle;
+    width: 42%;
+    line-height: 36px;
+    margin-top: 120px;
+}
+
+.expertsSection {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    justify-content: space-between;
+
+}
+
+.experts {
+    /*padding-left: 100px;*/
+    /*display: flex;
+    flex-wrap: wrap;*/
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    grid-gap: 60px 40px;
+}
+
+.eventsInfo {
+    /*width: 25%;*/
+}
+
+.eventsInfoList {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    padding-left: 50px;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 1px;
+        height: calc(100% - 10px);
+        background: linear-gradient(0deg, rgba(223,223,223,0) 0%, rgba(220,220,220,0.6587009803921569) 15%, rgba(195,195,195,1) 100%);
+        position: absolute;
+        left: 0px;
+        top: 5px;
+    }
+}
+
+.eventsInfoTitle {
+    font-size: 16px;
+    color: map-get($map: $colors, $key: basic-blue);
+    font-weight: 500;
+   
+}
+
+.eventsInfoHead {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+
+    &::before {
+        content: "◆";
+        color: inherit;
+        position: absolute;
+        left: -56px;
+    }
+}
+
+.eventsInfoData {
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1c3f8b;
+}
+
+.expertsProfile {
+    /*padding: 0 20px 0 20px;*/
+}
+
+.expertsProfileData {
+    /*margin: 0 0 60 0;*/
+    margin: 0;
+}
+
+.expertsProfileImage {
+    width: 300px;
+    border-radius: 40px;
+}
+
+.expertsProfileDescription {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    font-size: 20px;
+    color: #303030;
+    font-weight: 700;
+    padding: 0;
+}
+
+.descriptionJob {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #838383;
+    font-weight: 500;
+}
+
+.h2{    
+    @include font-h2;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.textInformation {
+    @include font-subTitle;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.textSection {
+    margin-top: 120px;
+}
+
+.dates {
+    margin-top: 50px;
+    display: flex;
+   
+}
+
+.april {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.dateText {
+    color: #1C3F8B;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.expertProgram {
+    list-style: none;
+    text-align: center;
+    line-height: 32px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid;
+    border-bottom-color: #dddddd;
+
+}
+
+.aprilBody{
+    margin-top: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 15px rgb(223, 223, 223);
+
+        /*&::before {
+        content: "";
+        width: calc(100% - 10px);
+        background: #303030;
+        height: 1px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: calc(100% - 10px);
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }*/
+}
+
+.expertProgramName {
+    color: #1C3F8B;
+    font-family: DM Sans;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.expertProgramTheme {
+    color: #1C3F8B;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.expertProgramTime {
+    color: #a1a1a1;
+    font-family: DM Sans;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.sponsorships {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h3 {
+    @include font-h3;
+}
+
+.sponsorshipsLogotypes {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    grid-gap: 60px 40px;
+
+    .logotype {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
+.stayUpToDate {
+    margin-top: 120px;
+    padding: 150px 20px 150px 20px;
+    border-radius: 50px;
+    /*background-color: #ebebeb;*/
+    display: flex;
+    justify-content: center;
+    background-image: url("/src/images/background.6c3571e0.jpg");
+    background-size: 110%;
+    background-position: -200% 55%;
+
+    .stayUpToDateleftSide{
+        padding-right: 90px;
+        padding-left: 220px;
+        width: 50%;
+    }
+
+    .stayUpToDateRightSide{
+        padding-right: 220px;
+        padding-left: 90px;
+        width: 50%;
+    }
+
+    .inputTitle {
+        display: flex;
+        align-items: center;
+
+        .arrowIcon {
+            padding-left: 5px;
+        }
+    }
+
+    .button {
+        padding: 20px;
+        background-color: #2963E1;
+        border-radius: 10px;
+        font-family: DM Sans;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+
+    }
+
+    .signUpText {
+        color: #1C3F8B;
+        font-family: DM Sans;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .inputForm {
+        margin-top: 30px;
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .inputEmail {
+        font-family: DM Sans;
+        font-size: 15px;
+        color: #464646;
+        border: none;
+        padding-left: 15px;
+        outline: none;
+    }
+
+    ::placeholder {
+        font-family: DM Sans;
+        font-size: 16px;
+        color: #a1a1a1;
+      }
+}
+
+.footer {
+    margin-top: 80px;
+    padding: 20px 0px 40px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footerInfo {
+        color: #a1a1a1;
+    }
+}

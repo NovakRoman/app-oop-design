@@ -1,0 +1,55 @@
+@mixin font( $family: null, $weight: null, $size: null, $color: null) {
+    font-family: DM Sans;
+    font-weight: 500;
+    font-size: 56px;
+    color: #2963E1;
+
+    @if $family != null {
+        font-family: $family;
+    }
+    @if $weight != null {
+        font-weight: $weight;
+    }
+    @if $size != null {
+        font-size: $size;
+    }
+    @if $color != null {
+        color: $color;
+    }
+}
+
+@mixin font-title(){
+    color: #2963E1;
+    font-family: DM Sans;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+@mixin font-subTitle(){
+    color: #1c3f8b;
+    font-family: DM Sans;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+
+@mixin font-h2(){
+    color: #2963E1;
+    font-family: DM Sans;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 52px;
+    text-align: center;
+}
+
+@mixin font-h3(){
+    color: #1C3F8B;
+    font-family: DM Sans;
+    font-size: 48px;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
