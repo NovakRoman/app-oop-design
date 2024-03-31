@@ -4,16 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>App OOP Design</title>
-  <script src="./src/app.js" defer></script>
   <link href="./src/scss/styles.scss" rel="stylesheet" />
 
   <!-- Load fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   
   <!-- Scripts -->
-  <script src="./src/app.js"></script>
+    <script src="./src/experts.js"></script>
+    <script src="./src/index.js"></script>
+
 
 </head>
 <body>
@@ -33,7 +38,7 @@
           <li class="eventInfoListItem"><span>Location</span><p class="eventInfoListData">Los Angeles</p></li>
         </ul>
         <div class="background">
-        <img src="/src/images/background.6c3571e0.jpg" class="backgroundImage">
+          <img src="/src/images/background.6c3571e0(edited).png" class="backgroundImage">
         </div>
       </nav>
     </section>
@@ -48,42 +53,8 @@
           <li class="eventsInfoTitle"><span class="eventsInfoHead">Interviews</span><p class="eventsInfoData">April 6</p></li>
         </nav>
       </div>
-      <div class="experts">
-        <div class="expertsProfile">
-          <figure class="expertsProfileData">
-            <img src="https://chemular.com/wp-content/uploads/2023/09/portrait-square-06.jpg" class="expertsProfileImage" alt="expertsProfileImage">
-            <figcaption class="expertsProfileDescription">Dianne Isch<span class="descriptionJob">UX design in InGen</span></figcaption>
-          </figure>
-        </div>
-        <div class="expertsProfile">
-          <figure class="expertsProfileData">
-            <img src="https://chemular.com/wp-content/uploads/2023/09/portrait-square-06.jpg" class="expertsProfileImage" alt="expertsProfileImage">
-            <figcaption class="expertsProfileDescription">Dianne Isch<span class="descriptionJob">UX design in InGen</span></figcaption>
-          </figure>
-        </div>
-        <div class="expertsProfile">
-          <figure class="expertsProfileData">
-            <img src="https://chemular.com/wp-content/uploads/2023/09/portrait-square-06.jpg" class="expertsProfileImage" alt="expertsProfileImage">
-            <figcaption class="expertsProfileDescription">Dianne Isch<span class="descriptionJob">UX design in InGen</span></figcaption>
-          </figure>
-        </div>
-        <div class="expertsProfile">
-          <figure class="expertsProfileData">
-            <img src="https://chemular.com/wp-content/uploads/2023/09/portrait-square-06.jpg" class="expertsProfileImage" alt="expertsProfileImage">
-            <figcaption class="expertsProfileDescription">Dianne Isch<span class="descriptionJob">UX design in InGen</span></figcaption>
-          </figure>
-        </div>
-        <div class="expertsProfile">
-          <figure class="expertsProfileData">
-            <img src="https://chemular.com/wp-content/uploads/2023/09/portrait-square-06.jpg" class="expertsProfileImage" alt="expertsProfileImage">
-            <figcaption class="expertsProfileDescription">Dianne Isch<span class="descriptionJob">UX design in InGen</span></figcaption>
-          </figure>
-        </div>
-        <div class="expertsProfile">
-          <figure class="expertsProfileData">
-            <img src="https://chemular.com/wp-content/uploads/2023/09/portrait-square-06.jpg" class="expertsProfileImage" alt="expertsProfileImage">
-            <figcaption class="expertsProfileDescription">Dianne Isch<span class="descriptionJob">UX design in InGen</span></figcaption>
-          </figure>
+      <div class="experts" id="expertsData">
+            <!-- Очікується "expertsData"-->
         </div>
       </div>
     </section>
@@ -115,20 +86,20 @@
           <p class="eventsInfoData">April 5</p>
           <p class="dateText">Next we spend the day talking about deceiving people with technology.</p>
         </div>
-        <div class="aprilBody">
+        <div class="aprilBody" >
           <nav class="expertProgram">
-            <li class="expertProgramName">Damaris Kimura</li>
-            <li class="expertProgramTheme">The invisible card reader</li>
+            <li class="expertProgramName">Andrew Greene</li>
+            <li class="expertProgramTheme">Neuralink dark patterns</li>
             <li class="expertProgramTime">9:00AM - 10:00AM PST</li>
           </nav>
           <nav class="expertProgram">
-            <li class="expertProgramName">Ibrahim Frasch</li>
-            <li class="expertProgramTheme">Stealing Fingerprints</li>
+            <li class="expertProgramName">Heather Terry</li>
+            <li class="expertProgramTheme">DALL-E for passports</li>
             <li class="expertProgramTime">10:00AM - 11:00AM PST</li>
           </nav>
           <nav class="expertProgram">
-            <li class="expertProgramName">Cathlene Burrage</li>
-            <li class="expertProgramTheme">Voiting machines</li>
+            <li class="expertProgramName">Piers Wilkins</li>
+            <li class="expertProgramTheme">Quantum password cracking</li>
             <li class="expertProgramTime">11:00AM - 12:00AM PST</li>
           </nav>
         </div>
@@ -174,20 +145,22 @@
       </div>
     </section>
     <section class="stayUpToDate">
-      <div class="stayUpToDateleftSide">
-        <h3 class="h3">Stay up to date</h3>
-        <p class="dateText">Get updates on all of our events and be the first to get notified when tickets go on sale.</p>
+      <div class="stayUpToDateContainer">
+        <div class="stayUpToDateleftSide">
+          <h3 class="h3Right">Stay up to date</h3>
+          <p class="dateText">Get updates on all of our events and be the first to get notified when tickets go on sale.</p>
+        </div>
+        <div class="stayUpToDateRightSide">
+          <div class="inputTitle">
+            <span class="signUpText">Sign up to our newsletter</span>
+            <img src="src/images/arrow-down.png" class="arrowIcon" alt="arrowIcon">
+          </div>
+          <div class="inputForm">
+            <input type="Email address" class="inputEmail" placeholder="Email address">
+            <button class="button">Sign up today</button>
+          </div>
+        </div>   
       </div>
-      <div class="stayUpToDateRightSide">
-        <div class="inputTitle">
-          <span class="signUpText">Sign up to our newsletter</span>
-          <img src="src/images/arrow-down.png" class="arrowIcon" alt="arrowIcon">
-        </div>
-        <div class="inputForm">
-          <input type="Email address" class="inputEmail" placeholder="Email address">
-          <button class="button">Sign up today</button>
-        </div>
-      </div>   
     </section>
     <section class="footer">
       <img src="/src/images/svgviewer-png-output.png" class="logo" alt="logo">

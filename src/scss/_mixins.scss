@@ -2,7 +2,7 @@
     font-family: DM Sans;
     font-weight: 500;
     font-size: 56px;
-    color: #2963E1;
+    color: map-get($map: $colors, $key: basic-blue);
 
     @if $family != null {
         font-family: $family;
@@ -19,7 +19,7 @@
 }
 
 @mixin font-title(){
-    color: #2963E1;
+    color: map-get($map: $colors, $key: basic-blue);
     font-family: DM Sans;
     font-size: 18px;
     font-weight: 500;
@@ -27,16 +27,21 @@
 }
 
 @mixin font-subTitle(){
-    color: #1c3f8b;
+    color: map-get($map: $colors, $key: dark-blue);
     font-family: DM Sans;
     font-size: 22px;
     font-weight: 500;
     line-height: 32px;
 }
 
+@mixin font-h1(){
+    color: map-get($map: $colors, $key: basic-blue);
+    font-size: 82px;
+    font-weight: 800;
+}
 
 @mixin font-h2(){
-    color: #2963E1;
+    color: map-get($map: $colors, $key: basic-blue);
     font-family: DM Sans;
     font-size: 48px;
     font-weight: 500;
@@ -45,11 +50,63 @@
 }
 
 @mixin font-h3(){
-    color: #1C3F8B;
+    color: map-get($map: $colors, $key: dark-blue);
     font-family: DM Sans;
     font-size: 48px;
     font-weight: 500;
     padding: 0;
     margin: 0;
+    text-align: center;
 }
+
+@mixin font-input(){
+    font-family: DM Sans;
+    font-size: 15px;
+    font-weight: 500;
+    color: map-get($map: $colors, $key: dark-gray);
+}
+
+@mixin font-button(){
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+
+@mixin font-info(){
+    font-family: Roboto Mono;
+    font-size: 15px;
+    color: map-get($map: $colors, $key: basic-blue);
+    font-weight: 400;
+}
+
+@mixin font-placeholder(){
+    font-family: DM Sans;
+    font-size: 16px;
+    color: #a1a1a1;
+}
+
+@mixin font-subText(){
+    font-family: Roboto Mono;
+    color: map-get($map: $colors, $key: basic-gray);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+@mixin font-text(){
+    font-family: DM Sans;
+    color: map-get($map: $colors, $key: dark-blue);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+
+
+
+
+
+
+
 
